@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Local jquery scripts-->
+  <script src="scripts.js"></script>
+  <script src="jquery-30.2.1.js"></script>
+  <!-- External Style sheet -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script>
+  //page load trigger
+    $( document ).ready(function() {
+      console.log("Ready");
+      loadNavBar();
+    });
+  </script>
+
+  <!--Modal div hidden by default -->
+  <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <!-- Error message to be shown when nothing has been loaded into the div-->
+        <div id="modalCont"><p>Something went wrong..</p></div>
+      </div>
+      </div>
+  </div>
+</head>
+
+<body>
+<div id="navph"></div>
+
+<div id="stockQ">
+
+
+Shelf Code:<br>
+<input type="text" name="shelfCode"><button onclick="showModalShelf()">Search</button><br>
+OR<br>
+Keyword:<br>
+<input type="text" name="keyword"><button onclick="showModalKeyword()">Search</button><br>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Temporary scripts file for initial development -->
+  <script src="scripts.js"></script>
+  <!-- Local jquery scripts-->
+  <script src="jquery-30.2.1.js"></script>
+  <!-- External Style sheet -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script>
+
+  //page load trigger
+    $( document ).ready(function() {
+      console.log("Ready");
+      fetchStock();
+      loadNavBar();
+    });
+  </script>
+
+  <!--Modal div hidden by default -->
+  <div id="id01" class="w3-modal">
+      <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">&times;</span>
+        <!-- Error message to be shown when nothing has been loaded into the div-->
+        <div id="modalCont"><p>Something went wrong..</p></div>
+      </div>
+      </div>
+  </div>
+</head>
+
+<body>
+
+  <div id="navph"></div>
+
+  <div style="width:50% border-style:solid" id="interaction" class="w3-container">
+
+
+  </div>
+
+  <!-- Stock table -->
+  <div id="stockDiv">
+  </div>
+
+</body>
+</html>
