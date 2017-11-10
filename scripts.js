@@ -109,8 +109,8 @@ function fetchStock()
                     //colours
 
                     //colour for priority
-                    /*
-                    if(resolveCasePriority(xmlDoc.getElementsByTagName("CasePriority")[i-1].childNodes[0].nodeValue) == "High")
+
+                    if(xmlDoc.getElementsByTagName("CurrStock")[i-1].childNodes[0].nodeValue < xmlDoc.getElementsByTagName("MaxStock")[i-1].childNodes[0].nodeValue)
                     {
                       cell1.style.backgroundColor = "#F83C3C";
                       cell2.style.backgroundColor = "#F83C3C";
@@ -120,8 +120,9 @@ function fetchStock()
                       cell6.style.backgroundColor = "#F83C3C";
                       cell7.style.backgroundColor = "#F83C3C";
                       cell8.style.backgroundColor = "#F83C3C";
-                      cell9.style.backgroundColor = "#F83C3C";
                     }
+
+                    /*
                     if(resolveCaseStatus(xmlDoc.getElementsByTagName("CaseStatus")[i-1].childNodes[0].nodeValue) == "Resolved" )
                     {
                       cell1.style.backgroundColor = "#CEF6CE";
