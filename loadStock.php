@@ -8,15 +8,23 @@ $servername = "localhost";
 $username = "dev";
 $password = "cctv4568";
 
-if (isset($_POST['client']) )
-{
-    $test = $_POST['client'];
-    //echo $test;
-}
-
 //create PDO object
 $conn = new PDO("mysql:host=$servername;dbname=devdata", $username, $password);
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+if (isset($_POST['shelfCode']) )
+{
+    $shelfCode = $_POST['shelfCode'];
+    //echo $test;
+}
+
+if (isset($_POST['search']) )
+{
+    //perform search based on posted critrea
+    $searchString = $_POST['search'];
+}
+
 
 //prepare statement
 $stmt = $conn->prepare("SELECT * FROM stock");
