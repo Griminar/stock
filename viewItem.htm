@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Local jquery scripts-->
+  <script src="scripts.js"></script>
+  <script src="jquery-30.2.1.js"></script>
+  <!-- External Style sheet -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script>
+  //page load trigger
+    $( document ).ready(function() {
+      console.log("Ready");
+      loadNavBar();
+      fetchStockItem();
+    });
+  </script>
+
+</head>
+
+<body>
+<div id="navph"></div>
+
+<div id="itemDiv">
+<br>
+
+<form>
+
+Item Description:<br>
+<input type="text" name="itemDesc" disabled><br>
+
+Current Stock:<br>
+<input type="text" name="itemStock" disabled> (If this is inaccurate please report)<br>
+
+Quantity Taken:<br>
+<input type="text" name="stockDelta"><br>
+
+Engineer Name:<br>
+<input type="text" name="engineerName"><br>
+
+Destination:<br>
+<input type="text" name="destination"><br>
+</form>
+
+</div>
+
+</body>
+</html>
